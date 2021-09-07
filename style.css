@@ -1,5 +1,13 @@
+html {
+    font-size: 16px;
+}
+
 body {
     margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
 }
 
 *,
@@ -8,3 +16,71 @@ body {
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+.catalog {
+    display: flex;
+    margin: 1em auto;
+    padding: 1.5em;
+    max-width: 900px;
+    min-height: 300px;
+
+    border: solid 1px gray;
+
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.card {
+    display: flex;
+    width: 200px;
+
+    flex-direction: column;
+}
+
+.card__img {
+    width: 200px;
+    height: 200px;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+}
+
+.card__title {
+    margin-top: 1em;
+
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.card__text {
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 700px) {
+    .catalog {
+        max-width: 400px;
+
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin-bottom: 1.5em;
+        width: 100%;
+
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .card__img {
+        margin-right: 1rem;
+        width: 100px;
+        height: 100px;
+    }
+
+    .card__title {
+        margin: 0;
+    }
+}
